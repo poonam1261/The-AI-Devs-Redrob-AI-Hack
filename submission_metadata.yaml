@@ -1,0 +1,53 @@
+# Redrob Hackathon submission metadata.
+# Fill in real team/contact/repo/sandbox values before uploading.
+
+team_name: "AI-devs"
+
+primary_contact:
+  name: "Full Name"
+  email: "primary@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Full Name"
+    email: "primary@example.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/YOUR_USERNAME/YOUR_REPO"
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./India_runs_data_and_ai_challenge/candidates.jsonl --job ./India_runs_data_and_ai_challenge/job_description.docx --out ./submission.csv"
+
+compute:
+  platform: "Local Windows machine"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "ChatGPT"
+
+ai_usage_summary: |
+  Used AI assistance for architecture, code generation, and review. No hosted
+  LLM or external API is called during candidate ranking.
+
+methodology_summary: |
+  Hybrid offline ranker for a Senior AI Engineer JD. The system streams 100k
+  candidates, extracts structured evidence from titles, career history, skills,
+  education, and Redrob behavioral signals, then combines semantic fit, search
+  and ranking domain fit, production ML evidence, behavioral availability, and
+  career quality. Suspicious profiles are penalized for inconsistent timelines,
+  unsupported AI skill claims, nontechnical-title keyword stuffing, and inflated
+  expert skills. The final output is deterministic and reproducible on CPU with
+  no network calls.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
